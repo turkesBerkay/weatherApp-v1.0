@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3 ease;
+  user-select: none; }
+  *::selection {
+    background-color: #F9F54B;
+    color: #205E61; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.2; }
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0F2027;
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); }
+  .app .logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #F9F54B; }
+  .app .container {
+    background: transparent;
+    border: 2px solid #F9F54B;
+    border-radius: 2rem;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .app .container .search {
+      display: flex;
+      align-items: center;
+      padding: 2rem; }
+      .app .container .search .search-bar input {
+        width: 300px;
+        height: 50px;
+        font-size: 4rem;
+        border: none;
+        border-bottom: 2px solid #F9F54B;
+        background-color: transparent;
+        color: #F9F54B;
+        font-family: 'Josefin Sans', sans-serif; }
+        .app .container .search .search-bar input::placeholder {
+          font-size: 2rem;
+          text-align: center;
+          margin: auto;
+          position: relative;
+          bottom: 50%;
+          transform: translate(0%, 65%);
+          color: #F9F54B;
+          font-family: 'Josefin Sans', sans-serif; }
+        .app .container .search .search-bar input:focus {
+          outline: none; }
+      .app .container .search .search-icon {
+        border-bottom: 2px solid #F9F54B;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .app .container .search .search-icon button {
+          background-color: transparent;
+          padding: 1rem;
+          cursor: pointer;
+          border: none; }
+    .app .container .app-container {
+      width: 100%;
+      display: none; }
+      .app .container .app-container .weather {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem; }
+        .app .container .app-container .weather img {
+          width: 100px; }
+        .app .container .app-container .weather .tempature {
+          font-size: 5rem;
+          text-align: center;
+          color: #fff;
+          margin: 1rem 0; }
+        .app .container .app-container .weather .condition-text {
+          font-size: 2rem;
+          color: #fff;
+          text-align: center; }
+      .app .container .app-container .additional-info {
+        display: flex;
+        width: 60%;
+        margin: 3rem auto;
+        align-items: center;
+        justify-content: space-between; }
+        .app .container .app-container .additional-info .wind-info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.9rem;
+          color: #fff; }
+          .app .container .app-container .additional-info .wind-info .wind-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center; }
+        .app .container .app-container .additional-info .humidity {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.9rem;
+          color: #fff; }
+          .app .container .app-container .additional-info .humidity .humidity-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center; }
+  .app .expl {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: #fff; }

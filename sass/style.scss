@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+$color-sun: #F9F54B;
+$color-primary: #8BF5FA;
+$color-secondary: #3F979B;
+$color-third: #205E61;
+$color-white: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3 ease;
+    user-select: none;
+    &::selection {
+        background-color: $color-sun;
+        color:$color-third;
+    }
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.2;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+
+    .logo {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $color-sun;
+    }
+
+    .container {    
+        background: transparent;
+        border: 2px solid $color-sun;
+        border-radius: 2rem;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .search {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            .search-bar {
+                input {
+                    width: 300px;
+                    height: 50px;
+                    font-size: 4rem;
+                    border: none;
+                    border-bottom: 2px solid $color-sun;
+                    background-color: transparent;
+                    color: $color-sun;
+                    font-family: 'Josefin Sans', sans-serif;
+                    &::placeholder {
+                        font-size: 2rem;
+                        text-align: center;
+                        margin: auto;
+                        position: relative;
+                        bottom: 50%;
+                        transform: translate(-0%, +65%);
+                        color: $color-sun;
+                        font-family: 'Josefin Sans', sans-serif;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .search-icon {
+                border-bottom: 2px solid $color-sun;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button {
+                    background-color: transparent;
+                    padding: 1rem;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+        }
+
+        .app-container {
+            width: 100%;
+            display: none;
+            .weather {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 1rem;
+
+                img {
+                    width: 100px;
+                }
+                
+                .tempature {
+                    font-size: 5rem;
+                    text-align: center;
+                    color: $color-white;
+                    margin: 1rem 0;
+                }
+
+                .condition-text {
+                    font-size: 2rem;
+                    color: $color-white;
+                    text-align: center;
+                }
+
+            }
+
+            
+
+            .additional-info {
+                display: flex;
+                width: 60%;
+                margin: 3rem auto;
+                align-items: center;
+                justify-content: space-between;
+
+                .wind-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.9rem;
+                    color: $color-white;
+                    .wind-icon {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+
+                .humidity {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;      
+                    align-items: center;
+                    font-size: 1.9rem;
+                    color: $color-white;
+                    .humidity-icon {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .expl {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        color: $color-white;
+    }
+}
